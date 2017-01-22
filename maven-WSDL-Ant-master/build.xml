@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<project name="maven-logback-antrun">
+    <!-- property name="cxf.home" location="/usr/myapps/cxf-2.5.1" / -->
+    <path id="cxf.classpath">
+        <pathelement path="${runtime_classpath}"/>
+    </path>
+    <target name="generateWSClient">
+        <echo message="compile classpath: ${compile_classpath}" />
+        <echo message="runtime classpath: ${runtime_classpath}" />
+        <echo message="test classpath:    ${test_classpath}" />
+        <echo message="plugin classpath:  ${plugin_classpath}" />
+        <java classname="org.apache.cxf.tools.wsdlto.WSDLToJava" fork="true">
+            <arg value="-client" />
+            <arg value="-verbose" />
+            <arg value="-d" />
+           <arg value="src/main/java" />
+            <arg value="${basedir}/wsdl/sayHello.wsdl" />
+            <classpath>
+                <path refid="cxf.classpath" />
+            </classpath>
+        </java>
+    </target>
+</project>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:tns="http://ws.mavenantrun.com/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    targetNamespace="http://ws.mavenantrun.com/"
+    name="SayHelloImplService">
+    <types></types>
+    <message name="getSayHelloAsString">
+        <part name="arg0" type="xsd:string"></part>
+    </message>
+    <message name="getSayHelloAsStringResponse">
+        <part name="return" type="xsd:string"></part>
+    </message>
+    <portType name="SayHello">
+        <operation name="getSayHelloAsString" parameterOrder="arg0">
+            <input message="tns:getSayHelloAsString"></input>
+            <output message="tns:getSayHelloAsStringResponse"></output>
+        </operation>
+    </portType>
+    <binding name="SayHelloImplPortBinding" type="tns:SayHello">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"></soap:binding>
+        <operation name="getSayHelloAsString">
+            <soap:operation soapAction=""></soap:operation>
+            <input>
+                <soap:body use="literal" namespace="http://ws.mavenantrun.com/"></soap:body>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://ws.mavenantrun.com/"></soap:body>
+            </output>
+        </operation>
+    </binding>
+    <service name="SayHelloImplService">
+        <port name="SayHelloImplPort" binding="tns:SayHelloImplPortBinding">
+            <soap:address location="http://localhost:8080/ws/hello"></soap:address>
+        </port>
+    </service>
+</definitions>
