@@ -1,16 +1,28 @@
 # Maven
 Maven Practice
 
+Create Java Application:
+	mvn archetype:generate
+	    -DgroupId=<package name>
+	    -DartifactId=<application name>
+
+Create java web application:
+	mvn archetype:generate
+	    -DgroupId=<package name>
+	    -DartifactId=<application name>
+	    -DarchetypeArtifactId=maven-archetype-webapp
+
 List of Maven Plugins: https://maven.apache.org/plugins/index.html
 
 Few frequently in-use maven plugins:
 
 
    PLUGIN	        DESCRIPTION
+   ---------		-----------------------------------------	
 		
     CLEAN	        Clean up after the build.
 
-    COMPILER	    Compiles Java sources.
+    COMPILE	    Compiles Java sources.
 
     DEPLOY	      Deploy the built artifact to the remote repository.
 
@@ -20,7 +32,9 @@ Few frequently in-use maven plugins:
 
     SITE	        Generate a site for the current project.
 
-    SUREFIRE	    Run the JUnit unit tests in an isolated class loader.
+    Test		Run tests
+    
+    SUREFIRE	    Run the JUnit tests in an isolated class loader.
 
     SUREFIRE-REPORT	  Generate a report based on the results of unit tests.
 
@@ -30,8 +44,8 @@ Few frequently in-use maven plugins:
 
     ASSEMBLY	    Build an assembly (distribution) of sources and/or binaries
 
-
-
+    
+-----------------------------------------------------------------------
 
 Examples covered the below scenarios using various maven plugins and dependencies.
   1) WSDL to/from POJO using ANT
