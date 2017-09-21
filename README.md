@@ -5,12 +5,17 @@ Create Java Application:
 	mvn archetype:generate
 	    -DgroupId=<package name>
 	    -DartifactId=<application name>
+	    -Dversion=<version number>
+	    -DarchetypeArtifactId=maven-archetype-quickstart
+	    -DinteractiveMode=false
 
 Create java web application:
 	mvn archetype:generate
 	    -DgroupId=<package name>
 	    -DartifactId=<application name>
+	    -Dversion=<version number>
 	    -DarchetypeArtifactId=maven-archetype-webapp
+	    -DinteractiveMode=false
 
 List of Maven Plugins: https://maven.apache.org/plugins/index.html
 
