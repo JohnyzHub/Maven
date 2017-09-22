@@ -1,63 +1,68 @@
 # Maven
-Maven Practice
 
-Create Java Application:
-	mvn archetype:generate
-	    -DgroupId=<package name>
-	    -DartifactId=<application name>
-	    -Dversion=<version number>
-	    -DarchetypeArtifactId=maven-archetype-quickstart
-	    -DinteractiveMode=false
+	POM : A Project Object Model(POM) is the fundamental unit of work in Maven. 
+		It is an XML file that contains information about the project 
+		and configuration details used by Maven to build the project
 
-Create java web application:
-	mvn archetype:generate
-	    -DgroupId=<package name>
-	    -DartifactId=<application name>
-	    -Dversion=<version number>
-	    -DarchetypeArtifactId=maven-archetype-webapp
-	    -DinteractiveMode=false
+	Artifact	: Artifact is a file(usually JAR) that gets deployed to a Maven repository.
+				Each artifact contains a groupid, artifactid and version number.
 
-List of Maven Plugins: https://maven.apache.org/plugins/index.html
-
-Few frequently in-use maven plugins:
+	GROUPID		: Groupid is an unique identifier of the project across all projects in a gien maven repository.
+	ARTIFACTID	: Artifiact id is the name of the jar in lower case letters. 
+	VERSION		: Number of the distribution
+	PLUGIN		: Plugin performs a course of action on project in maven. Eg: mvn clean, mvn package
 
 
-   PLUGIN	        DESCRIPTION
-   ---------		-----------------------------------------	
-		
-    CLEAN	        Clean up after the build.
+	Create Java Application:
+		mvn archetype:generate
+		    -DgroupId=<package name>
+		    -DartifactId=<application name>
+		    -Dversion=<version number>
+		    -DarchetypeArtifactId=maven-archetype-quickstart
+		    -DinteractiveMode=false
 
-    COMPILE	    Compiles Java sources.
+	Create java web application:
+		mvn archetype:generate
+		    -DgroupId=<package name>
+		    -DartifactId=<application name>
+		    -Dversion=<version number>
+		    -DarchetypeArtifactId=maven-archetype-webapp
+		    -DinteractiveMode=false
 
-    DEPLOY	      Deploy the built artifact to the remote repository.
+	List of Maven Plugins: https://maven.apache.org/plugins/index.html
 
-    INSTALL	      Install the built artifact into the local repository.
+	Few frequently in-use maven plugins:
 
-    RESOURCES	    Copy the resources to the output directory for including in the JAR
 
-    SITE	        Generate a site for the current project.
+	   PLUGIN	        		DESCRIPTION
+	   ---------			-----------------------------------------	
 
-    Test		Run tests
-    
-    SUREFIRE	    Run the JUnit tests in an isolated class loader.
+	    CLEAN	        	Clean up after the build.
 
-    SUREFIRE-REPORT	  Generate a report based on the results of unit tests.
+	    COMPILE	    		Compiles Java sources.
 
-    SHADE	         Build an Uber-JAR from the current project, including dependencies.
+	    DEPLOY	      		Deploy the built artifact to the remote repository.
 
-    SOURCE	      Build a source-JAR from the current project.
+	    INSTALL	      		Install the built artifact into the local repository.
 
-    ASSEMBLY	    Build an assembly (distribution) of sources and/or binaries
+	    RESOURCES	    		Copy the resources to the output directory for including in the JAR
 
-    
------------------------------------------------------------------------
+	    SITE	        	Generate a site for the current project.
 
-Examples covered the below scenarios using various maven plugins and dependencies.
-  1) WSDL to/from POJO using ANT
-  
-  2) Custom Plugin
-  
-  3) Multi Module
-  
-  4) WSDL to/from POJO using Maven Plugin
+	    Test			Run tests
+
+	    SUREFIRE	    		Run the JUnit tests in an isolated class loader.
+
+	    SUREFIRE-REPORT	  	Generate a report based on the results of unit tests.
+
+	    SHADE	         	Build an Uber-JAR from the current project, including dependencies.
+
+	    SOURCE	      		Build a source-JAR from the current project.
+
+	    ASSEMBLY	    		Build an assembly (distribution) of sources and/or binaries
+
+
+	-----------------------------------------------------------------------
+
+
   
